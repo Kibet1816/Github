@@ -1,0 +1,28 @@
+body{
+  background-color: gray;
+  padding-bottom: 30px;
+}
+.navbar{
+  background-color:black;
+}
+.navbar img{
+  height: 120px;
+  margin-left: 60px;
+}
+.navbar h1{
+  margin-right: 500px;
+  color: whitesmoke;
+}
+.search{
+  text-align: center;
+}
+input{
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+fieldset{
+  width: 500px;
+  text-align: center;
+  margin-left: 395px;
+}
