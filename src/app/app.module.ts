@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { SearchDisplayComponent } from './search-display/search-display.component';
 import { RoutingModule } from './routing/routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RoutingModule } from './routing/routing.module';
   imports: [
     BrowserModule,
     RoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [HttpService],
