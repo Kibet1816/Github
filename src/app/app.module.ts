@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpService } from './http.service';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -18,7 +19,7 @@ import { RoutingModule } from './routing/routing.module';
     RoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
