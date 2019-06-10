@@ -17,12 +17,12 @@ export class HttpService {
 
   findProfile() {
 // tslint:disable-next-line: max-line-length
-   return this.http.get('https://api.github.com/users/' + this.username + '?client_id=' + this.client_id + '&client_secret=' + this.client_secret);
+   return this.http.get('https://api.github.com/users/' + this.username + '?access_token=c3b1f5c6f1f249e5dadd317dd3c2988eb380e3d7');
 
   }
   findRepo() {
 // tslint:disable-next-line: max-line-length
-    return this.http.get('https://api.github.com/users/' + this.username + '/repos?client_id=' + this.client_id + '&client_secret=' + this.client_secret);
+    return this.http.get('https://api.github.com/users/' + this.username + '/repos?access_token=c3b1f5c6f1f249e5dadd317dd3c2988eb380e3d7');
 
   }
   userName(username: string) {
