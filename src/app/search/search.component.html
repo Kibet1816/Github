@@ -12,7 +12,7 @@
           <label for="github-user">Github user:</label>
           <input type="text" class="form-control" id="user" [(ngModel)]="username" name="username" #user='ngModel'>
         </div>
-        <button type="submit" class="btn btn-success" (click)="showProfile()">Search</button>
+        <button type="submit" class="yes" class="btn btn-success" (click)="showProfile()">Search</button>
       </fieldset>
     </form>
   </div><br><br><br>
@@ -36,13 +36,15 @@
             <div class="work2">Number of followers: {{response.followers}}</div>
             <div class="work3">Following: {{response.following}}</div>
           </div>
-          <button type="submit" class="btn btn-success" ><a href="response.html.url">View profile</a></button>
+          <button type="submit" class="btn btn-success" ><a href={{response.html_url}}>View profile</a></button>
         </div>
       </div>
       <div class="col-md-6">
         <div class="repos">
-          <div *ngIf='projects'>
-            <p>{{projects.name}}</p>
+          <h1>PROJECTS</h1>
+          <div  class="projects" *ngFor='let project of projects'>
+           <h4>{{project.name}}</h4><br>
+           <p>{{project.description}}</p><br>
           </div>
         </div>
       </div>
