@@ -15,17 +15,24 @@ export class SearchComponent implements OnInit {
   constructor(private svc: HttpService, private http: HttpClient) {}
 
   showProfile() {
-// tslint:disable-next-line: max-line-length
-    const obs = this.http.get('https://api.github.com/users/' + this.username + '?9adb3041de4c3c9162a512ff1303f347e033f264=' + 'http://api.github.com');
-    obs.subscribe((response) => {
-      this.response = response;
-      console.log(response);
-    });
-
+    this.svc.userName(this.username);
+    this.svc.findProfile().subscribe(
+      response => {
+        this.response = response;
       }
+      );
+      this.svc.findRepo().subscribe(
+        projects => {
+          this.projects = projects;
+          console.log(projects);
+        }
+      );
 
-      ngOnInit() {
-
-      }
     }
+
+    ngOnInit() {
+
+    }
+  }
+
 
