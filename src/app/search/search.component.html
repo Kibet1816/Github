@@ -5,23 +5,52 @@
   </div><br><br>
 
   <div class="search">
-    <form>
+    <form #searchForm='ngForm' >
       <fieldset class="border p-2">
         <legend class="w-auto">Search:</legend>
         <div class="form-group">
           <label for="github-user">Github user:</label>
-          <input type="text" class="form-control" id="user">
+          <input type="text" class="form-control" id="user" [(ngModel)]="username" name="username" #user='ngModel'>
         </div>
-        <p>Or</p>
-        <div class="form-group">
-          <label for="github-repo">Github repo:</label>
-          <input type="text" class="form-control" id="repo">
-        </div>
-        <button type="submit" class="btn btn-success">Search</button>
+        <button type="submit" class="btn btn-success" (click)="showProfile()">Search</button>
       </fieldset>
     </form>
+  </div><br><br><br>
+  <div *ngIf="response">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="profile">
+          <div class="user-details">
+            <h1>{{response.login}}</h1>
+            <div class="image">
+              <img src={{response.avatar_url}} alt="">
+            </div>
+            <div class="info">
+              <p>Name: {{response.name}}</p><br>
+              <p>Company: {{response.company}}</p><br>
+              <p>Bio: {{response.bio}}</p><br>
+            </div>
+          </div><br><br><br>
+          <div class="work">
+            <div class="work1">Number of repos: {{response.public_repos}}</div>
+            <div class="work2">Number of followers: {{response.followers}}</div>
+            <div class="work3">Following: {{response.following}}</div>
+          </div>
+          <button type="submit" class="btn btn-success" ><a href="response.html.url">View profile</a></button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="repos">
+          <div *ngIf='projects'>
+            <p>{{projects.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p><a routerLink="/search" routerActive='active'>Search</a></p>
   </div>
-  <p><a routerLink="/view" routerActive='active'>View</a></p>
-<br><br><br><br><br>
+  <!-- <p><a routerLink="/view" routerActive='active'>View</a></p> -->
+  <br><br><br><br><br><br><br><br><br><br>
+
 
 </body>

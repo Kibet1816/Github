@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-search-display',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchDisplayComponent implements OnInit {
 
-  constructor() { }
+  @Output()displayProfile = new EventEmitter() ;
+
+
+  username: string;
+  response: any;
+  constructor(private http: HttpClient ) { }
 
   ngOnInit() {
   }
+
 
 }
