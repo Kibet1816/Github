@@ -1,27 +1,43 @@
-# GithubSearch
+## GitHub-Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+#### Description
 
-## Development server
+ This is a web application whereby a user can search and view profiles on `github.com`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Authors
 
-## Code scaffolding
+This program was written by [Denis Kibet](https://github.com/Kibet1816)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Setup and usage instructions
 
-## Build
+- Clone this repository or download the zip
+- In your terminal, run  `ng serve` to open a localhost server
+- Open your preffered browser and navigate to `https://localhost/4200/`
+- Once the app is loaded key in the name of the github user and click search
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### BDD
+| Input        | Behaviour           | Outcome  |
+| ------------- |:-------------:| -----:|
+| Keys in a name | Input field accepts the data |  |
+| Clicks search | User is loaded | Profile and repositories are displayed |
+| Clicks view profile | Profile is loaded | User is redirected to `github.com` |
 
-## Running unit tests
+#### Technologies used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Technologies used to write the application are:
 
-## Running end-to-end tests
+- HTML,
+- CSS,
+- TypeScript,
+- AngularJS,
+- Markdown, and
+- Git
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Known bugs and malfunctions
+There are no known bugs.If found please contact the developer through [email](https://www.gmail.com).
 
-## Further help
+#### License and copyright information
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[MIT license](https://github.com/Kibet1816/Git-google/blob/master/license.md)
+
+Copyright (c) 2019 Denis Kibet
