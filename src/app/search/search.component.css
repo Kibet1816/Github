@@ -1,5 +1,6 @@
 body{
   padding-bottom: 30px;
+  background-color: azure;
 }
 .navbar{
   background-color:black;
@@ -50,6 +51,7 @@ body{
   top: 30px;
   margin-left: 30px;
   padding-right: 100px;
+  background-color: azure;
 }
 .profile img{
   margin-left: 10px;
@@ -104,6 +106,8 @@ button{
   top: 30px;
   margin-left: 50px;
   padding-right: 100px;
+  background-color: azure;
+  border: 2px 2px 2px solid black;
 }
 .image img{
   width: 182px;

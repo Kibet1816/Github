@@ -43,7 +43,7 @@
         <div class="repos">
           <h1>PROJECTS</h1>
           <div  class="projects" *ngFor='let project of projects'>
-           <h4>{{project.name}}</h4><br>
+           <h4><a href={{project.html_url}}>{{project.name}}</a></h4><br>
            <p>{{project.description}}</p><br>
           </div>
         </div>
